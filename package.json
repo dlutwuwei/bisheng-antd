@@ -1,0 +1,32 @@
+{
+  "name": "bisheng-example",
+  "scripts": {
+    "start": "bisheng start",
+    "build": "bisheng build --ssr",
+    "deploy": "bisheng gh-pages --ssr"
+  },
+  "dependencies": {
+    "antd": "^2.13.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "bezier-easing": "^2.0.3",
+    "bisheng": "^0.24.2",
+    "bisheng-plugin-antd": "^0.15.0",
+    "bisheng-plugin-description": "^0.1.1",
+    "bisheng-plugin-react": "^0.5.5",
+    "bisheng-plugin-toc": "^0.4.2",
+    "bisheng-theme-one": "^0.2.19",
+    "color-standalone": "^0.11.6",
+    "css-split-webpack-plugin": "^0.2.3",
+    "dora-plugin-upload": "^0.3.2",
+    "enquire.js": "^2.1.6",
+    "rc-queue-anim": "^1.2.2",
+    "rc-scroll-anim": "^1.0.7",
+    "rc-tween-one": "^1.4.5",
+    "react-color": "^2.13.5",
+    "react-copy-to-clipboard": "^5.0.0",
+    "react-github-button": "^0.1.11",
+    "react-intl": "^2.3.0"
+  },
+  "version": "1.0.19",
+  "private": true
+}
