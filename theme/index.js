@@ -2,6 +2,7 @@ const path = require('path');
 
 const homeTmpl = './template/Home/index';
 const contentTmpl = './template/Content/index';
+const topbuzzTmpl = './template/Topbuzz/index';
 
 function pickerGenerator(module) {
   const tester = new RegExp(`^docs/${module}`);
@@ -42,6 +43,14 @@ module.exports = {
         };
       }
     },
+    topbuzz(markdownData) {
+      if (/topbuzz/.test(markdownData.meta.filename)) {
+        console.log(markdownData.meta)
+        return {
+          meta: markdownData.meta
+        }
+      }
+    },
     'docs/pattern': pickerGenerator('pattern'),
     'docs/react': pickerGenerator('react'),
     'docs/resource': pickerGenerator('resource'),
@@ -50,7 +59,7 @@ module.exports = {
   plugins: [
     'bisheng-plugin-description',
     'bisheng-plugin-toc?maxDepth=2&keepElem',
-    'bisheng-plugin-antd',
+    // 'bisheng-plugin-antd',
     'bisheng-plugin-react?lang=__react',
   ],
   routes: {
@@ -81,6 +90,9 @@ module.exports = {
     }, {
       path: 'docs/resource/:children',
       component: contentTmpl,
+    }, {
+      path: 'topbuzz/rss',
+      component: topbuzzTmpl,
     }],
   },
 };

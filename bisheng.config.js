@@ -6,7 +6,8 @@ module.exports = {
   // 扫描docs和posts中所有markdown
   source: {
     components: 'components',
-    docs: 'docs'
+    docs: 'docs',
+    topbuzz: 'topbuzz'
   },
   theme: './theme',
   htmlTemplate: './theme/static/template.html',
